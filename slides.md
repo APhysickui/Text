@@ -1,8 +1,7 @@
 ---
-theme: apple
+theme: default
 title: 苹果风格演示文稿
 titleTemplate: '%s - Apple Style'
-background: https://source.unsplash.com/collection/94734566/1920x1080
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -10,21 +9,29 @@ drawings:
   persist: false
 transition: slide-left
 mdc: true
+css: unocss
 ---
 
-# 苹果风格演示文稿
-
-简洁、优雅、专业
-
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-6 py-3 rounded cursor-pointer bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-medium shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
-    开始演示 <carbon:arrow-right class="inline ml-1"/>
-  </span>
+<div class="apple-cover-bg">
+  <div class="apple-cover-content">
+    <h1 class="apple-cover-title">苹果风格演示文稿</h1>
+    <p class="apple-cover-subtitle">简洁、优雅、专业</p>
+    
+    <div class="pt-12">
+      <span @click="$slidev.nav.next" class="apple-button-primary apple-button-large">
+        开始演示 <carbon:arrow-right class="inline ml-1"/>
+      </span>
+    </div>
+  </div>
+  
+  <div class="apple-cover-decoration">
+    <div class="apple-logo-large">🍎</div>
+  </div>
 </div>
 
 <div class="abs-br m-6 flex gap-2">
   <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="在 GitHub 上查看"
-    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
+    class="text-xl text-white/70 hover:text-white transition-colors duration-300">
     <carbon-logo-github />
   </a>
 </div>
@@ -376,6 +383,3 @@ class: text-center
     <carbon-logo-github />
   </a>
 </div>
-\`\`\`
-
-接下来创建苹果风格的主题样式文件：

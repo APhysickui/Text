@@ -3,10 +3,13 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
+yarn.lock
 
 # Build outputs
 dist/
 .slidev/
+.output/
 
 # Environment variables
 .env
@@ -41,3 +44,6 @@ coverage/
 # Temporary folders
 tmp/
 temp/
+
+# Slidev specific
+.slidev/
