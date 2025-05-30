@@ -25,7 +25,7 @@ mdc: true
 <div class="abs-br m-6 flex gap-2">
   <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="在 GitHub 上查看"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
+    <carbon:logo-github />
   </a>
 </div>
 
@@ -45,7 +45,7 @@ layout: intro
 </div>
 
 <div class="my-10 grid grid-cols-[40px_1fr] gap-y-4 w-min">
-  <div class="flex justify-center items-center"><carbon:logo-apple class="text-3xl"/></div>
+  <div class="flex justify-center items-center"><div class="text-3xl">🍎</div></div>
   <div class="text-xl font-medium">创新设计</div>
   <div class="flex justify-center items-center"><carbon:earth class="text-3xl"/></div>
   <div class="text-xl font-medium">全球影响</div>
@@ -328,7 +328,7 @@ layout: default
   </div>
   
   <div v-click class="flex flex-col items-center p-4 rounded-xl bg-gray-50 dark:bg-gray-800/50 shadow-md">
-    <carbon:tv class="text-4xl text-blue-500 mb-4" />
+    <div class="text-4xl text-blue-500 mb-4">📺</div>
     <div class="text-lg font-medium">Apple TV+</div>
     <div class="text-sm opacity-70 text-center mt-2">原创电影与剧集<br>多平台观看体验</div>
   </div>
@@ -340,13 +340,13 @@ layout: default
   </div>
   
   <div v-click class="flex flex-col items-center p-4 rounded-xl bg-gray-50 dark:bg-gray-800/50 shadow-md">
-    <carbon:credit-card class="text-4xl text-blue-500 mb-4" />
+    <div class="text-4xl text-blue-500 mb-4">💳</div>
     <div class="text-lg font-medium">Apple Pay</div>
     <div class="text-sm opacity-70 text-center mt-2">安全便捷的支付<br>全球广泛接受</div>
   </div>
   
   <div v-click class="flex flex-col items-center p-4 rounded-xl bg-gray-50 dark:bg-gray-800/50 shadow-md">
-    <carbon:fitness class="text-4xl text-blue-500 mb-4" />
+    <div class="text-4xl text-blue-500 mb-4">💪</div>
     <div class="text-lg font-medium">Apple Fitness+</div>
     <div class="text-sm opacity-70 text-center mt-2">个性化健身课程<br>健康数据整合</div>
   </div>
@@ -373,9 +373,6 @@ class: text-center
 <div class="abs-br m-6 flex gap-2">
   <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="在 GitHub 上查看"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
+    <carbon:logo-github />
   </a>
 </div>
-\`\`\`
-
-接下来创建苹果风格的主题样式文件：

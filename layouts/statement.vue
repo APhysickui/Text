@@ -1,36 +1,51 @@
 <template>
-  <div class="slidev-layout statement">
+  <div class="slidev-layout statement-layout">
     <div class="statement-content">
+      <div class="quote-mark quote-mark-open">"</div>
       <slot />
+      <div class="quote-mark quote-mark-close">"</div>
     </div>
+    <div class="statement-background"></div>
   </div>
 </template>
 
 <style scoped>
-.statement {
-  position: relative;
-  background: var(--apple-background);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.statement-layout {
+  @apply h-full flex flex-col justify-center items-center text-center relative overflow-hidden px-16 py-12;
 }
 
 .statement-content {
-  max-width: 900px;
-  padding: var(--apple-spacing-2xl);
+  @apply z-10 max-w-5xl relative;
 }
 
-.statement::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.statement-layout :deep(h1) {
+  @apply text-4xl md:text-5xl font-bold leading-tight mb-8;
+  background: linear-gradient(135deg, #0071e3 0%, #34aadc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.statement-layout :deep(p) {
+  @apply text-lg text-gray-500 dark:text-gray-400 mt-6;
+}
+
+.quote-mark {
+  @apply absolute text-8xl font-bold text-blue-200 dark:text-blue-800 select-none;
+}
+
+.quote-mark-open {
+  @apply -top-4 -left-8;
+}
+
+.quote-mark-close {
+  @apply -bottom-8 -right-8;
+}
+
+.statement-background {
+  @apply absolute inset-0 z-0;
   background: 
-    radial-gradient(circle at 20% 80%, rgba(0, 122, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(88, 86, 214, 0.1) 0%, transparent 50%);
-  pointer-events: none;
+    radial-gradient(circle at 30% 70%, rgba(0, 113, 227, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(52, 170, 220, 0.05) 0%, transparent 50%);
 }
 </style>

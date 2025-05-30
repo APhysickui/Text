@@ -1,52 +1,50 @@
 <template>
-  <div class="slidev-layout intro apple-blur">
+  <div class="slidev-layout intro-layout">
     <div class="intro-content">
-      <slot />
+      <div class="intro-main">
+        <slot />
+      </div>
+      <div class="intro-sidebar">
+        <slot name="sidebar" />
+      </div>
     </div>
     <div class="intro-background"></div>
   </div>
 </template>
 
 <style scoped>
-.intro {
-  position: relative;
-  overflow: hidden;
+.intro-layout {
+  @apply h-full relative overflow-hidden;
 }
 
 .intro-content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: var(--apple-spacing-3xl);
+  @apply h-full flex items-center z-10 relative px-16 py-12;
+}
+
+.intro-main {
+  @apply flex-1 pr-8;
+}
+
+.intro-sidebar {
+  @apply w-80 flex flex-col justify-center;
+}
+
+.intro-layout :deep(h1) {
+  @apply text-5xl font-bold mb-6;
+  background: linear-gradient(135deg, #0071e3 0%, #34aadc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.intro-layout :deep(p) {
+  @apply text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6;
 }
 
 .intro-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, var(--apple-blue) 0%, var(--apple-system-indigo) 100%);
-  z-index: 1;
-}
-
-.intro-background::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-  animation: float 20s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  33% { transform: translate(30px, -30px) rotate(120deg); }
-  66% { transform: translate(-20px, 20px) rotate(240deg); }
+  @apply absolute inset-0 z-0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(0, 113, 227, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(52, 170, 220, 0.1) 0%, transparent 50%);
 }
 </style>
