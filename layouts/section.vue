@@ -1,19 +1,59 @@
 <template>
-  <div class="slidev-layout section-layout">
+  <div class="slidev-layout section-layout" :style="backgroundStyle">
+    <div class="section-overlay" v-if="hasBackground"></div>
     <div class="section-content">
       <div class="section-number" v-if="$slidev.nav.currentSlide?.frontmatter?.section">
         {{ $slidev.nav.currentSlide.frontmatter.section }}
       </div>
       <slot />
     </div>
-    <div class="section-background"></div>
+    <div class="section-background" v-if="!hasBackground"></div>
   </div>
 </template>
+
+<script setup>
+import { computed, inject } from 'vue'
+
+const props = defineProps({
+  background: String,
+  backgroundImage: String,
+})
+
+const $slidev = inject('slidev')
+
+const frontmatter = $slidev?.nav?.currentSlide?.frontmatter || {}
+
+const backgroundUrl = computed(() => {
+  return props.background || 
+         props.backgroundImage || 
+         frontmatter.background || 
+         frontmatter.backgroundImage
+})
+
+const hasBackground = computed(() => !!backgroundUrl.value)
+
+const backgroundStyle = computed(() => {
+  if (backgroundUrl.value) {
+    return {
+      backgroundImage: `url(${backgroundUrl.value})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }
+  }
+  return {
+    background: 'linear-gradient(135deg, #0071e3 0%, #34aadc 100%)'
+  }
+})
+</script>
 
 <style scoped>
 .section-layout {
   @apply h-full flex flex-col justify-center items-center text-center relative overflow-hidden;
-  background: linear-gradient(135deg, #0071e3 0%, #34aadc 100%);
+}
+
+.section-overlay {
+  @apply absolute inset-0 bg-black bg-opacity-50 z-0;
 }
 
 .section-content {

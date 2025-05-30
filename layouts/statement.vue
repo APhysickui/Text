@@ -1,17 +1,55 @@
 <template>
-  <div class="slidev-layout statement-layout">
+  <div class="slidev-layout statement-layout" :style="backgroundStyle">
+    <div class="statement-overlay" v-if="hasBackground"></div>
     <div class="statement-content">
       <div class="quote-mark quote-mark-open">"</div>
       <slot />
       <div class="quote-mark quote-mark-close">"</div>
     </div>
-    <div class="statement-background"></div>
+    <div class="statement-background" v-if="!hasBackground"></div>
   </div>
 </template>
+
+<script setup>
+import { computed, inject } from 'vue'
+
+const props = defineProps({
+  background: String,
+  backgroundImage: String,
+})
+
+const slidev = inject('slidev')
+const frontmatter = slidev?.nav?.currentSlide?.frontmatter || {}
+
+const backgroundUrl = computed(() => {
+  return props.background || 
+         props.backgroundImage || 
+         frontmatter.background || 
+         frontmatter.backgroundImage
+})
+
+const hasBackground = computed(() => !!backgroundUrl.value)
+
+const backgroundStyle = computed(() => {
+  if (backgroundUrl.value) {
+    return {
+      backgroundImage: `url(${backgroundUrl.value})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }
+  }
+  return {}
+})
+</script>
 
 <style scoped>
 .statement-layout {
   @apply h-full flex flex-col justify-center items-center text-center relative overflow-hidden px-16 py-12;
+}
+
+.statement-overlay {
+  @apply absolute inset-0 bg-black bg-opacity-40 z-0;
 }
 
 .statement-content {
@@ -26,12 +64,29 @@
   background-clip: text;
 }
 
+/* 当有背景图片时，标题使用白色 */
+.statement-layout:has(.statement-overlay) :deep(h1) {
+  @apply text-white;
+  background: none;
+  -webkit-text-fill-color: white;
+}
+
 .statement-layout :deep(p) {
   @apply text-lg text-gray-500 dark:text-gray-400 mt-6;
 }
 
+/* 当有背景图片时，段落使用白色 */
+.statement-layout:has(.statement-overlay) :deep(p) {
+  @apply text-white text-opacity-80;
+}
+
 .quote-mark {
-  @apply absolute text-8xl font-bold text-blue-200 dark:text-blue-800 select-none;
+  @apply absolute text-8xl font-bold select-none;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.statement-layout:not(:has(.statement-overlay)) .quote-mark {
+  @apply text-blue-200 dark:text-blue-800;
 }
 
 .quote-mark-open {

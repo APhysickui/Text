@@ -1,5 +1,6 @@
 <template>
-  <div class="slidev-layout intro-layout">
+  <div class="slidev-layout intro-layout" :style="backgroundStyle">
+    <div class="intro-overlay" v-if="hasBackground"></div>
     <div class="intro-content">
       <div class="intro-main">
         <slot />
@@ -8,13 +9,51 @@
         <slot name="sidebar" />
       </div>
     </div>
-    <div class="intro-background"></div>
+    <div class="intro-background" v-if="!hasBackground"></div>
   </div>
 </template>
+
+<script setup>
+import { computed, inject } from 'vue'
+
+const props = defineProps({
+  background: String,
+  backgroundImage: String,
+})
+
+const $slidev = inject('slidev', {})
+
+const frontmatter = $slidev?.nav?.currentSlide?.frontmatter || {}
+
+const backgroundUrl = computed(() => {
+  return props.background || 
+         props.backgroundImage || 
+         frontmatter.background || 
+         frontmatter.backgroundImage
+})
+
+const hasBackground = computed(() => !!backgroundUrl.value)
+
+const backgroundStyle = computed(() => {
+  if (backgroundUrl.value) {
+    return {
+      backgroundImage: `url(${backgroundUrl.value})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }
+  }
+  return {}
+})
+</script>
 
 <style scoped>
 .intro-layout {
   @apply h-full relative overflow-hidden;
+}
+
+.intro-overlay {
+  @apply absolute inset-0 bg-black bg-opacity-30 z-0;
 }
 
 .intro-content {
@@ -37,8 +76,20 @@
   background-clip: text;
 }
 
+/* 当有背景图片时，标题使用白色 */
+.intro-layout:has(.intro-overlay) :deep(h1) {
+  @apply text-white;
+  background: none;
+  -webkit-text-fill-color: white;
+}
+
 .intro-layout :deep(p) {
   @apply text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6;
+}
+
+/* 当有背景图片时，段落使用白色 */
+.intro-layout:has(.intro-overlay) :deep(p) {
+  @apply text-white text-opacity-90;
 }
 
 .intro-background {
