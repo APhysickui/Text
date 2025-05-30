@@ -1,7 +1,8 @@
 ---
-theme: default
+theme: apple
 title: 苹果风格演示文稿
 titleTemplate: '%s - Apple Style'
+background: https://source.unsplash.com/collection/94734566/1920x1080
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -9,30 +10,22 @@ drawings:
   persist: false
 transition: slide-left
 mdc: true
-css: unocss
 ---
 
-<div class="apple-cover-bg">
-  <div class="apple-cover-content">
-    <h1 class="apple-cover-title">苹果风格演示文稿</h1>
-    <p class="apple-cover-subtitle">简洁、优雅、专业</p>
-    
-    <div class="pt-12">
-      <span @click="$slidev.nav.next" class="apple-button-primary apple-button-large">
-        开始演示 <carbon:arrow-right class="inline ml-1"/>
-      </span>
-    </div>
-  </div>
-  
-  <div class="apple-cover-decoration">
-    <div class="apple-logo-large">🍎</div>
-  </div>
+# 苹果风格演示文稿
+
+简洁、优雅、专业
+
+<div class="pt-12">
+  <span @click="$slidev.nav.next" class="px-6 py-3 rounded cursor-pointer bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-medium shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+    开始演示 <carbon:arrow-right class="inline ml-1"/>
+  </span>
 </div>
 
 <div class="abs-br m-6 flex gap-2">
   <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="在 GitHub 上查看"
-    class="text-xl text-white/70 hover:text-white transition-colors duration-300">
-    <carbon:logo-github />
+    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon-logo-github />
   </a>
 </div>
 
@@ -52,7 +45,7 @@ layout: intro
 </div>
 
 <div class="my-10 grid grid-cols-[40px_1fr] gap-y-4 w-min">
-  <div class="flex justify-center items-center"><div class="text-3xl">🍎</div></div>
+  <div class="flex justify-center items-center"><carbon:logo-apple class="text-3xl"/></div>
   <div class="text-xl font-medium">创新设计</div>
   <div class="flex justify-center items-center"><carbon:earth class="text-3xl"/></div>
   <div class="text-xl font-medium">全球影响</div>
@@ -335,25 +328,25 @@ layout: default
   </div>
   
   <div v-click class="flex flex-col items-center p-4 rounded-xl bg-gray-50 dark:bg-gray-800/50 shadow-md">
-    <carbon:video class="text-4xl text-blue-500 mb-4" />
+    <carbon:tv class="text-4xl text-blue-500 mb-4" />
     <div class="text-lg font-medium">Apple TV+</div>
     <div class="text-sm opacity-70 text-center mt-2">原创电影与剧集<br>多平台观看体验</div>
   </div>
   
   <div v-click class="flex flex-col items-center p-4 rounded-xl bg-gray-50 dark:bg-gray-800/50 shadow-md">
-    <carbon:game-wireless class="text-4xl text-blue-500 mb-4" />
+    <carbon:game-console class="text-4xl text-blue-500 mb-4" />
     <div class="text-lg font-medium">Apple Arcade</div>
     <div class="text-sm opacity-70 text-center mt-2">无广告游戏订阅<br>跨设备游戏体验</div>
   </div>
   
   <div v-click class="flex flex-col items-center p-4 rounded-xl bg-gray-50 dark:bg-gray-800/50 shadow-md">
-    <carbon:wallet class="text-4xl text-blue-500 mb-4" />
+    <carbon:credit-card class="text-4xl text-blue-500 mb-4" />
     <div class="text-lg font-medium">Apple Pay</div>
     <div class="text-sm opacity-70 text-center mt-2">安全便捷的支付<br>全球广泛接受</div>
   </div>
   
   <div v-click class="flex flex-col items-center p-4 rounded-xl bg-gray-50 dark:bg-gray-800/50 shadow-md">
-    <carbon:activity class="text-4xl text-blue-500 mb-4" />
+    <carbon:fitness class="text-4xl text-blue-500 mb-4" />
     <div class="text-lg font-medium">Apple Fitness+</div>
     <div class="text-sm opacity-70 text-center mt-2">个性化健身课程<br>健康数据整合</div>
   </div>
@@ -380,9 +373,9 @@ class: text-center
 <div class="abs-br m-6 flex gap-2">
   <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="在 GitHub 上查看"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:logo-github />
+    <carbon-logo-github />
   </a>
 </div>
 \`\`\`
 
-同时更新多页面文件中的图标：
+接下来创建苹果风格的主题样式文件：

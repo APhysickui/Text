@@ -1,17 +1,15 @@
 <template>
-  <div class="slidev-layout intro apple-intro-bg">
+  <div class="slidev-layout intro apple-blur">
     <div class="intro-content">
       <slot />
     </div>
-    <div class="intro-pattern"></div>
+    <div class="intro-background"></div>
   </div>
 </template>
 
 <style scoped>
-.apple-intro-bg {
+.intro {
   position: relative;
-  background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
-  color: white;
   overflow: hidden;
 }
 
@@ -22,41 +20,33 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3rem;
+  padding: var(--apple-spacing-3xl);
 }
 
-.intro-pattern {
+.intro-background {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 25% 75%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 75% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  background: linear-gradient(135deg, var(--apple-blue) 0%, var(--apple-system-indigo) 100%);
   z-index: 1;
+}
+
+.intro-background::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
   animation: float 20s ease-in-out infinite;
 }
 
 @keyframes float {
   0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  33% { transform: translate(20px, -20px) rotate(120deg); }
-  66% { transform: translate(-15px, 15px) rotate(240deg); }
-}
-
-/* 确保文字在暗背景上可读 */
-.intro-content :deep(h1) {
-  color: white !important;
-  background: none !important;
-  -webkit-text-fill-color: white !important;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.intro-content :deep(p) {
-  color: rgba(255, 255, 255, 0.9) !important;
-}
-
-.intro-content :deep(div) {
-  color: rgba(255, 255, 255, 0.9) !important;
+  33% { transform: translate(30px, -30px) rotate(120deg); }
+  66% { transform: translate(-20px, 20px) rotate(240deg); }
 }
 </style>

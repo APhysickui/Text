@@ -43,7 +43,7 @@ layout: default
   </div>
   
   <div v-click class="flex flex-col items-center p-4 rounded-xl bg-gray-50 dark:bg-gray-800/50 shadow-md">
-    <carbon:renewable-energy class="text-4xl text-green-500 mb-4" />
+    <carbon:energy class="text-4xl text-green-500 mb-4" />
     <div class="text-lg font-medium">可再生能源</div>
     <div class="text-sm opacity-70 text-center mt-2">使用100%<br>可再生能源</div>
   </div>
@@ -57,4 +57,4 @@ layout: default
 </div>
 \`\`\`
 
-更新 package.json 以确保包含正确的图标包：
+创建主题配置文件：
