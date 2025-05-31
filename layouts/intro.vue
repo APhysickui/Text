@@ -14,37 +14,39 @@
 </template>
 
 <script setup>
-import { computed, inject } from 'vue'
+import { computed, inject } from "vue";
 
 const props = defineProps({
   background: String,
   backgroundImage: String,
-})
+});
 
-const $slidev = inject('slidev', {})
+const slidev = inject("slidev", {});
 
-const frontmatter = $slidev?.nav?.currentSlide?.frontmatter || {}
+const frontmatter = slidev?.nav?.currentSlide?.frontmatter || {};
 
 const backgroundUrl = computed(() => {
-  return props.background || 
-         props.backgroundImage || 
-         frontmatter.background || 
-         frontmatter.backgroundImage
-})
+  return (
+    props.background ||
+    props.backgroundImage ||
+    frontmatter.background ||
+    frontmatter.backgroundImage
+  );
+});
 
-const hasBackground = computed(() => !!backgroundUrl.value)
+const hasBackground = computed(() => !!backgroundUrl.value);
 
 const backgroundStyle = computed(() => {
   if (backgroundUrl.value) {
     return {
       backgroundImage: `url(${backgroundUrl.value})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat'
-    }
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
   }
-  return {}
-})
+  return {};
+});
 </script>
 
 <style scoped>
@@ -94,8 +96,16 @@ const backgroundStyle = computed(() => {
 
 .intro-background {
   @apply absolute inset-0 z-0;
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(0, 113, 227, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(52, 170, 220, 0.1) 0%, transparent 50%);
+  background:
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(0, 113, 227, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(52, 170, 220, 0.1) 0%,
+      transparent 50%
+    );
 }
 </style>

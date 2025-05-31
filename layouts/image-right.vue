@@ -5,10 +5,10 @@
         <slot />
       </div>
       <div class="image-right-image">
-        <img 
-          v-if="$slidev.nav.currentSlide?.frontmatter?.image" 
-          :src="$slidev.nav.currentSlide.frontmatter.image" 
-          :alt="$slidev.nav.currentSlide?.frontmatter?.alt || 'Image'"
+        <img
+          v-if="slidev.nav.currentSlide?.frontmatter?.image"
+          :src="slidev.nav.currentSlide.frontmatter.image"
+          :alt="slidev.nav.currentSlide?.frontmatter?.alt || 'Image'"
           class="slide-image"
         />
         <slot name="image" />
@@ -16,6 +16,12 @@
     </div>
   </div>
 </template>
+
+<script setup>
+import { inject } from "vue";
+
+const slidev = inject("slidev", {});
+</script>
 
 <style scoped>
 .image-right-layout {
@@ -63,7 +69,7 @@
 }
 
 .image-right-layout :deep(li)::before {
-  content: '✓';
+  content: "✓";
   @apply text-blue-500 font-bold mr-3 text-lg;
 }
 </style>

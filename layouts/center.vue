@@ -1,3 +1,13 @@
+<!--
+ * @Author: Ethan && ethan@hanlife02.com
+ * @Date: 2025-05-31 00:04:53
+ * @LastEditors: Ethan && ethan@hanlife02.com
+ * @LastEditTime: 2025-05-31 00:31:26
+ * @FilePath: /slidev-customized-ethan/layouts/center.vue
+ * @Description: 
+ * 
+ * Copyright (c) 2025 by Ethan, All Rights Reserved. 
+-->
 <template>
   <div class="slidev-layout center-layout">
     <div class="center-content">
@@ -23,7 +33,7 @@
 
 .center-layout :deep(h1) {
   @apply text-5xl font-bold mb-8 leading-tight;
-  background: linear-gradient(135deg, #0071e3 0%, #34aadc 100%);
+  background: linear-gradient(135deg,rgb(248, 248, 249) 0%, #34aadc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
