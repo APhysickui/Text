@@ -1,14 +1,21 @@
 import { defineConfig } from "@slidev/cli";
 
 export default defineConfig({
-  // Slidev 特定配置
+  // Presentation title
   title: "My Presentation",
 
-  // Vite 配置
+  // Configure Vite server options
+  server: {
+    host: "0.0.0.0", // Allow connections from any IP
+    port: 3030, // Set port to 3030
+    cors: true, // Enable CORS
+  },
+
+  // More detailed CORS configuration via Vite
   vite: {
     server: {
       cors: {
-        origin: "*", // 允许所有来源（开发环境）
+        origin: "*", // Allow all origins
         methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
         credentials: true,
