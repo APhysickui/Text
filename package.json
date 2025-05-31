@@ -48,7 +48,7 @@
   },
   "scripts": {
     "build": "slidev build slides.md",
-    "dev": "slidev slides.md --open",
+    "dev": "slidev slides.md --open --host 0.0.0.0",
     "export": "slidev export slides.md",
     "screenshot": "slidev export slides.md --format png"
   },
