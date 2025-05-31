@@ -50,7 +50,8 @@
     "build": "slidev build slides.md",
     "dev": "slidev slides.md --open",
     "export": "slidev export slides.md",
-    "screenshot": "slidev export slides.md --format png"
+    "screenshot": "slidev export slides.md --format png",
+    "dev:cors": "slidev slides.md --open --host 0.0.0.0 --port 3030 --cors"
   },
   "slidev": {
     "colorSchema": "both",
