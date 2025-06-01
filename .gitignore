@@ -41,3 +41,24 @@ coverage/
 # Temporary folders
 tmp/
 temp/
+
+# md文档
+advanced/
+custom/
+formatting/
+interactive/
+examples/
+patterns/
+pages/
+
+layout-examples.md
+content-container-example.md
+layout-components-example.md
+
+templates/
+
+
+package-lock.json
+pnpm-lock.yaml
+
+*.pdf

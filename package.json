@@ -42,13 +42,14 @@
     "@iconify-json/mdi": "^1.1.54",
     "@slidev/cli": "^0.42.11",
     "@slidev/types": "^0.42.5",
+    "playwright-chromium": "^1.52.0",
     "prettier": "^3.5.3",
     "prettier-plugin-slidev": "^1.0.5",
     "typescript": "^5.0.0"
   },
   "scripts": {
     "build": "slidev build slides.md",
-    "dev": "slidev slides.md --open --host 0.0.0.0",
+    "dev": "slidev slides.md",
     "export": "slidev export slides.md",
     "screenshot": "slidev export slides.md --format png"
   },

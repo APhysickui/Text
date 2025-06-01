@@ -1,5 +1,6 @@
 ---
 theme: ./
+colorSchema: dark
 title: 封面
 titleTemplate: "%s - Apple Style"
 background: ../image.png
@@ -25,7 +26,7 @@ mdc: true
 </div>
 
 <div class="abs-br m-6 flex gap-2">
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="在 GitHub 上查看"
+  <a href="https://github.com/hanlife02" target="_blank" alt="GitHub" title="在 GitHub 上查看"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon:logo-github />
   </a>
@@ -453,6 +454,76 @@ scheme              path
 
 ---
 
+# HTTP vs HTTPS
+
+### 网络协议的安全升级 - 从明文到加密传输
+
+<div class="mt-6 overflow-x-auto">
+  <table class="w-4/5 mx-auto bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg">
+    <thead class="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/50 dark:to-purple-900/50">
+      <tr>
+        <th class="px-3 py-2 text-left text-sm font-bold text-gray-900 dark:text-gray-100 border-b border-gray-200 dark:border-gray-600">对比项目</th>
+        <th class="px-3 py-2 text-left text-sm font-bold text-gray-900 dark:text-gray-100 border-b border-gray-200 dark:border-gray-600">HTTP</th>
+        <th class="px-3 py-2 text-left text-sm font-bold text-gray-900 dark:text-gray-100 border-b border-gray-200 dark:border-gray-600">HTTPS</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200 dark:divide-gray-600">
+      <tr class="hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors">
+        <td class="px-3 py-2 text-sm font-medium text-gray-900 dark:text-gray-100">名称</td>
+        <td class="px-3 py-2 text-sm">
+          <span class="font-mono font-bold text-blue-600 dark:text-blue-400">HyperText Transfer Protocol</span>
+        </td>
+        <td class="px-3 py-2 text-sm">
+          <span class="font-mono font-bold text-green-600 dark:text-green-400">HTTP Secure / HTTP over SSL/TLS</span>
+        </td>
+      </tr>
+      <tr class="hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors">
+        <td class="px-3 py-2 text-sm font-medium text-gray-900 dark:text-gray-100">端口</td>
+        <td class="px-3 py-2 text-sm">
+          <span class="font-mono font-bold text-blue-600 dark:text-blue-400">80</span>
+        </td>
+        <td class="px-3 py-2 text-sm">
+          <span class="font-mono font-bold text-green-600 dark:text-green-400">443</span>
+        </td>
+      </tr>
+      <tr class="hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-colors">
+        <td class="px-3 py-2 text-sm font-medium text-gray-900 dark:text-gray-100">安全性</td>
+        <td class="px-3 py-2 text-sm">
+          <span class="px-2 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300 rounded-full text-xs font-bold">明文传输</span>
+        </td>
+        <td class="px-3 py-2 text-sm">
+          <span class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-xs font-bold">加密传输</span>
+        </td>
+      </tr>
+      <tr class="hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors">
+        <td class="px-3 py-2 text-sm font-medium text-gray-900 dark:text-gray-100">数据完整性</td>
+        <td class="px-3 py-2 text-sm text-red-600 dark:text-red-400">❌ 无保证</td>
+        <td class="px-3 py-2 text-sm text-green-600 dark:text-green-400">✅ SSL/TLS校验</td>
+      </tr>
+      <tr class="hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors">
+        <td class="px-3 py-2 text-sm font-medium text-gray-900 dark:text-gray-100">浏览器显示</td>
+        <td class="px-3 py-2 text-sm">🔓 不安全警告</td>
+        <td class="px-3 py-2 text-sm">🔒 安全锁图标</td>
+      </tr>
+      <tr class="hover:bg-yellow-50 dark:hover:bg-yellow-900/20 transition-colors">
+        <td class="px-3 py-2 text-sm font-medium text-gray-900 dark:text-gray-100">适用场景</td>
+        <td class="px-3 py-2 text-sm text-gray-700 dark:text-gray-300">内网测试</td>
+        <td class="px-3 py-2 text-sm text-gray-700 dark:text-gray-300">生产环境</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="mt-4 text-center">
+  <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-50 to-green-50 dark:from-red-900/30 dark:to-green-900/30 rounded-2xl border border-gray-200 dark:border-gray-600">
+    <div class="text-base text-gray-700 dark:text-gray-300 font-medium">
+      现代网站推荐使用 HTTPS，安全第一！🔐
+    </div>
+  </div>
+</div>
+
+---
+
 # 开发者模式
 
 <div class="text-center">
@@ -634,12 +705,10 @@ layout: center
 
 ## 如何提供网页信息供他人访问？
 
-<div class="text-lg text-gray-600 dark:text-gray-300 mt-8">
-“能用公众号干嘛要用网页🥸”
-
-“可是有一个自己的网站真的很装啊🥸”
-
-</div>
+  <div class="text-lg text-gray-600 dark:text-gray-300">
+  “有公众号为什么还要用网站” <br>
+  “因为有一个自己的网站很装啊🥸"
+  </div>
 
 ---
 
@@ -700,7 +769,31 @@ layout: center
 
 ---
 
-# 以此Slides为例
+# 服务器的服务运行与端口之间的联系
+
+## “端口是服务对外的‘门牌号’”
+
+<br>
+
+### 服务（Service）
+
+#### 指在服务器上运行的应用程序（如Web服务器、数据库服务、FTP服务等）
+
+#### 它为客户端提供某种功能
+
+<br>
+
+### 端口（Port）
+
+#### 服务器内部用来“区分不同服务”的逻辑编号
+
+#### 每个端口对应一个唯一的服务或进程（在同一个IP和协议下）
+
+---
+
+# 以 PKUHUB笔记平台 为例
+
+# 如何让别人访问你的网页信息
 
 ## 准备：
 
@@ -712,7 +805,7 @@ layout: center
 
 ---
 
-# 第一步 -- 登陆服务器
+# 壹 -- 登陆服务器
 
 <div class="grid grid-cols-5 gap-8 items-center">
   <!-- 左侧图片 - 占3列 -->
@@ -742,6 +835,117 @@ layout: center
 
 ---
 
-# 第二步 -- 在合适的目录下运行你的服务
+# 贰 -- 在合适的目录下运行你的服务
+
+#### 你可以在终端里运行一个服务（这里我们使用面板+容器运行服务，便于维护）
+
+#### 示例服务运行在服务器的 5000 端口
+
+<div class="text-center">
+  <img src="/CleanShot 2025-05-31 at 17.05.01@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
+</div>
 
 ---
+
+# 叁 -- 域名解析到对应的服务器ip
+
+#### 在你的域名注册商处将域名解析到 Clab 服务器的 IP
+
+#### 如果你的服务器有防火墙，记得打开对应的端口
+
+<div class="text-center">
+  <img src="/CleanShot 2025-05-31 at 17.21.36@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
+</div>
+
+---
+
+# 肆 -- 使用 Nginx 反向代理
+
+### 配置文件示例如下：
+
+<div class="text-center">
+  <img src="/CleanShot 2025-05-31 at 18.36.59@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
+</div>
+
+---
+
+# 伍 -- 配置 ssl 证书(一)
+
+### 在域名注册商处申请ssl证书，（一般用3个月时长免费的证书就可以）
+
+<br>
+
+<div class="text-center">
+  <img src="/CleanShot 2025-05-31 at 18.44.53@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
+</div>
+
+---
+
+# 伍 -- 配置 ssl 证书(二)
+
+### 为了减轻运维的负担，依然采用 1panel 面板部署ssl证书
+
+### 实际上 ssl证书 也是配置在 Nginx 的配置文件里的
+
+<br>
+
+<div class="text-center">
+  <img src="/CleanShot 2025-05-31 at 18.47.48@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
+</div>
+
+---
+
+# 完成！
+
+<div class="flex items-center justify-center min-h-[400px]">
+  <div class="text-center max-w-4xl">
+    <div class="text-8xl mb-8">🎊</div>
+    <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">
+      网页成功显示！ 🎉
+    </h2>
+    <div class="bg-gradient-to-r from-blue-50 via-green-50 to-purple-50 dark:from-blue-900/30 dark:via-green-900/30 dark:to-purple-900/30 rounded-3xl p-8 border border-gray-200 dark:border-gray-600 shadow-lg">
+      <div class="text-2xl text-gray-700 dark:text-gray-300 font-medium">
+        你已经成功将服务部署到网站！
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+layout: ending-layout
+---
+
+# 感谢观看！
+
+## 总结
+
+<div class="text-xl space-y-4 mt-8">
+  <div class="flex items-center justify-center">
+    <div class="text-2xl mr-3">🌐</div>
+    <span>浏览器访问网页的完整流程</span>
+  </div>
+  
+  <div class="flex items-center justify-center">
+    <div class="text-2xl mr-3">🔗</div>
+    <span>IP、域名、DNS 的工作原理</span>
+  </div>
+  
+  <div class="flex items-center justify-center">
+    <div class="text-2xl mr-3">🚀</div>
+    <span>如何部署自己的网站服务</span>
+  </div>
+</div>
+
+::footer::
+
+<div class="text-center space-y-2 opacity-80">
+  <div class="text-lg">
+    💻 Ethan | Don't stay awake for too long.
+  </div>
+  <div class="text-sm">
+    📧 ethan@hanlife02.com | 🏠 hanlife02.com
+  </div>
+  <div class="text-sm text-gray-500">
+    《404 NOT FOUND》 - 2025.06.07
+  </div>
+</div>
