@@ -3,7 +3,7 @@ theme: ./
 colorSchema: dark
 title: 404 NOT FOUND
 titleTemplate: "%s - Ethan"
-background: ../image.png
+background: figures/image.png
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -84,7 +84,7 @@ Telegram :
   </a>
 </p>
 
-<img src="/image.svg" class="rounded-full w-60 abs-tr mt-16 mr-12"/>
+<img src="figures/image.svg" class="rounded-full w-60 abs-tr mt-16 mr-12"/>
 
 ---
 
@@ -299,7 +299,7 @@ Telegram :
 <br>
 
 <div class="text-center">
-  <img src="/url.png" class="max-w-xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
+  <img src="figures/url.png" class="max-w-xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
 </div>
 
 <br>
@@ -319,7 +319,7 @@ Telegram :
 <br>
 
 <div class="text-center">
-  <img src="/url2.png" class="max-w-4xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
+  <img src="figures/url2.png" class="max-w-4xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
 </div>
 
 ---
@@ -382,7 +382,7 @@ scheme              path
 # 简易的DNS运作原理
 
 <div class="text-center">
-  <img src="/DNS.png" class="max-w-xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
+  <img src="figures/DNS.png" class="max-w-xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
 </div>
 
 ---
@@ -527,7 +527,7 @@ scheme              path
 # 开发者模式
 
 <div class="text-center">
-  <img src="/CleanShot 2025-05-31 at 14.39.57@2x.png" class="max-w-xl mx-auto rounded-lg shadow-lg" alt="PKUHUB" />
+  <img src="figures/CleanShot 2025-05-31 at 14.39.57@2x.png" class="max-w-xl mx-auto rounded-lg shadow-lg" alt="PKUHUB" />
 </div>
 
 ---
@@ -873,7 +873,7 @@ scheme              path
 <div class="grid grid-cols-5 gap-8 items-center">
   <!-- 左侧图片 - 占3列 -->
   <div class="col-span-3">
-    <img src="/CleanShot 2025-05-31 at 15.29.21@2x.png" class="w-full rounded-lg shadow-lg" alt="登录服务器" />
+    <img src="figures/CleanShot 2025-05-31 at 15.29.21@2x.png" class="w-full rounded-lg shadow-lg" alt="登录服务器" />
   </div>
   
   <!-- 右侧文字 - 占2列 -->
@@ -901,7 +901,7 @@ scheme              path
 # 贰 -- 在合适的目录下运行你的服务(一)
 
 <div class="text-center">
-  <img src="/CleanShot 2025-06-01 at 18.50.12@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
+  <img src="figures/CleanShot 2025-06-01 at 18.50.12@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
 </div>
 
 ---
@@ -909,7 +909,7 @@ scheme              path
 # 贰 -- 在合适的目录下运行你的服务(二)
 
 <div class="text-center">
-  <img src="/CleanShot 2025-06-01 at 18.59.31@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
+  <img src="figures/CleanShot 2025-06-01 at 18.59.31@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
 </div>
 
 ---
@@ -921,7 +921,7 @@ scheme              path
 #### 如果你的服务器有防火墙，记得打开对应的端口
 
 <div class="text-center">
-  <img src="/CleanShot 2025-06-01 at 19.14.24@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
+  <img src="figures/CleanShot 2025-06-01 at 19.14.24@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
 </div>
 
 ---
@@ -931,7 +931,7 @@ scheme              path
 ### 配置文件示例如下：
 
 <div class="text-center">
-  <img src="/CleanShot 2025-05-31 at 18.36.59@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
+  <img src="figures/CleanShot 2025-05-31 at 18.36.59@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
 </div>
 
 ---
@@ -943,7 +943,7 @@ scheme              path
 <br>
 
 <div class="text-center">
-  <img src="/CleanShot 2025-05-31 at 18.44.53@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
+  <img src="figures/CleanShot 2025-05-31 at 18.44.53@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
 </div>
 
 ---
@@ -957,7 +957,7 @@ scheme              path
 <br>
 
 <div class="text-center">
-  <img src="/CleanShot 2025-05-31 at 18.47.48@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
+  <img src="figures/CleanShot 2025-05-31 at 18.47.48@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
 </div>
 
 ---
