@@ -4,8 +4,8 @@ export default defineConfig({
   server: {
     host: "127.0.0.1",
     port: 3030,
+    allowedHosts: ["localhost", "127.0.0.1", "slides.ethan02.com"],
     cors: {
-      // 使用简化的 CORS 配置，避免类型错误
       origin: [
         "http://localhost:3030",
         "http://127.0.0.1:3030",
