@@ -2,7 +2,7 @@
  * @Author: Ethan && ethan@hanlife02.com
  * @Date: 2025-05-31 00:04:53
  * @LastEditors: Ethan && ethan@hanlife02.com
- * @LastEditTime: 2025-06-01 20:33:59
+ * @LastEditTime: 2025-06-01 20:47:59
  * @FilePath: /slidev-customized-ethan/README.md
  * @Description:
  *
@@ -11,7 +11,7 @@
 
 # 自用模板
 
-客制了一份slidev模板，
+客制了一份slidev模板，仅供学习使用，禁止商用。
 
 ## 使用
 
@@ -19,7 +19,7 @@
 
 - 本地有`Node.js`和`npm`环境，如果没有可以自行搜索安装教程
 
-### 流程
+### 运行slides流程
 
 1. clone此repo到本地
 
@@ -39,7 +39,7 @@ cd path/slidev-customized-ethan
 npm install
 ```
 
-4. 重命名`example.md`为`slides.md`。
+4. 重命名`example.md`为`slides.md`，并自行修改内容。
 
 5. 运行服务
 
