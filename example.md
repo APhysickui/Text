@@ -87,8 +87,8 @@ Telegram :
 <img src="/image.svg" class="rounded-full w-60 abs-tr mt-16 mr-12"/>
 
 ---
-layout: center
----
+
+## layout: center
 
 # 第一节
 
@@ -761,8 +761,8 @@ scheme              path
 </div>
 
 ---
-layout: center
----
+
+## layout: center
 
 # 第二节
 
@@ -979,8 +979,8 @@ layout: center
 </div>
 
 ---
-layout: ending-layout
----
+
+## layout: ending-layout
 
 # 感谢观看！
 

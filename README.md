@@ -2,7 +2,7 @@
  * @Author: Ethan && ethan@hanlife02.com
  * @Date: 2025-05-31 00:04:53
  * @LastEditors: Ethan && ethan@hanlife02.com
- * @LastEditTime: 2025-06-01 19:31:43
+ * @LastEditTime: 2025-06-01 20:33:59
  * @FilePath: /slidev-customized-ethan/README.md
  * @Description:
  *
@@ -11,7 +11,7 @@
 
 # 自用模板
 
-此repo仅用于pkuhub技术讲座
+客制了一份slidev模板，
 
 ## 使用
 
@@ -39,7 +39,9 @@ cd path/slidev-customized-ethan
 npm install
 ```
 
-4. 运行服务
+4. 重命名`example.md`为`slides.md`。
+
+5. 运行服务
 
 ```
 npm run start
