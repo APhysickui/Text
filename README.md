@@ -2,7 +2,7 @@
  * @Author: Ethan && ethan@hanlife02.com
  * @Date: 2025-05-31 00:04:53
  * @LastEditors: Ethan && ethan@hanlife02.com
- * @LastEditTime: 2025-06-01 18:14:19
+ * @LastEditTime: 2025-06-01 19:01:42
  * @FilePath: /slidev-customized-ethan/README.md
  * @Description:
  *
@@ -12,3 +12,5 @@
 # 自用模板
 
 此repo用于pkuhub技术讲座
+
+## 使用流程

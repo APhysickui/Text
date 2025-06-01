@@ -1,8 +1,8 @@
 ---
 theme: ./
 colorSchema: dark
-title: 封面
-titleTemplate: "%s - Apple Style"
+title: 404 NOT FOUND
+titleTemplate: "%s - Ethan"
 background: ../image.png
 class: text-center
 highlighter: shiki
@@ -532,6 +532,69 @@ scheme              path
 
 ---
 
+# HTTP状态码
+
+### 服务器告诉你的"回复消息" 📨
+
+<div class="mt-8 overflow-x-auto">
+  <table class="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg">
+    <thead class="bg-gradient-to-r from-green-50 to-red-50 dark:from-green-900/50 dark:to-red-900/50">
+      <tr>
+        <th class="px-6 py-4 text-left text-sm font-bold text-gray-900 dark:text-gray-100 border-b border-gray-200 dark:border-gray-600">状态码</th>
+        <th class="px-6 py-4 text-left text-sm font-bold text-gray-900 dark:text-gray-100 border-b border-gray-200 dark:border-gray-600">含义</th>
+        <th class="px-6 py-4 text-left text-sm font-bold text-gray-900 dark:text-gray-100 border-b border-gray-200 dark:border-gray-600">描述</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200 dark:divide-gray-600">
+      <tr class="hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors">
+        <td class="px-6 py-4 text-sm">
+          <span class="font-mono font-bold text-green-600 dark:text-green-400">200</span>
+        </td>
+        <td class="px-6 py-4 text-sm text-gray-900 dark:text-gray-100">OK 成功</td>
+        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">请求成功，服务器正常返回请求的资源 ✅</td>
+      </tr>
+      <tr class="hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors">
+        <td class="px-6 py-4 text-sm">
+          <span class="font-mono font-bold text-blue-600 dark:text-blue-400">301/302</span>
+        </td>
+        <td class="px-6 py-4 text-sm text-gray-900 dark:text-gray-100">重定向</td>
+        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">资源已转移，浏览器会自动跳转到新地址 🔄</td>
+      </tr>
+      <tr class="hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-colors">
+        <td class="px-6 py-4 text-sm">
+          <span class="font-mono font-bold text-orange-600 dark:text-orange-400">404</span>
+        </td>
+        <td class="px-6 py-4 text-sm text-gray-900 dark:text-gray-100">Not Found</td>
+        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">找不到请求的资源，可能是地址错误或文件不存在 🔍</td>
+      </tr>
+      <tr class="hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors">
+        <td class="px-6 py-4 text-sm">
+          <span class="font-mono font-bold text-red-600 dark:text-red-400">500</span>
+        </td>
+        <td class="px-6 py-4 text-sm text-gray-900 dark:text-gray-100">服务器错误</td>
+        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">服务器内部出现错误，无法完成请求处理 ⚠️</td>
+      </tr>
+      <tr class="hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors">
+        <td class="px-6 py-4 text-sm">
+          <span class="font-mono font-bold text-purple-600 dark:text-purple-400">403</span>
+        </td>
+        <td class="px-6 py-4 text-sm text-gray-900 dark:text-gray-100">Forbidden 禁止</td>
+        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">服务器拒绝请求，通常是权限不足或访问被拒绝 🚫</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="mt-6 text-center">
+  <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/30 dark:to-orange-900/30 rounded-2xl border border-gray-200 dark:border-gray-600">
+    <div class="text-lg text-gray-700 dark:text-gray-300 font-medium">
+      状态码就像服务器给你的"表情包"，告诉你发生了什么 😊
+    </div>
+  </div>
+</div>
+
+---
+
 # 总结 - 浏览器都做了什么～
 
 ### 从输入网址到看到网页的完整过程
@@ -791,9 +854,9 @@ layout: center
 
 ---
 
-# 以 PKUHUB笔记平台 为例
+# 以 本Slides 为例 (借助1panel)
 
-# 如何让别人访问你的网页信息
+# 让别人访问你的网页信息的大概流程
 
 ## 准备：
 
@@ -835,14 +898,18 @@ layout: center
 
 ---
 
-# 贰 -- 在合适的目录下运行你的服务
-
-#### 你可以在终端里运行一个服务（这里我们使用面板+容器运行服务，便于维护）
-
-#### 示例服务运行在服务器的 5000 端口
+# 贰 -- 在合适的目录下运行你的服务(一)
 
 <div class="text-center">
-  <img src="/CleanShot 2025-05-31 at 17.05.01@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
+  <img src="/CleanShot 2025-06-01 at 18.50.12@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
+</div>
+
+---
+
+# 贰 -- 在合适的目录下运行你的服务(二)
+
+<div class="text-center">
+  <img src="/CleanShot 2025-06-01 at 18.59.31@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
 </div>
 
 ---
@@ -854,12 +921,12 @@ layout: center
 #### 如果你的服务器有防火墙，记得打开对应的端口
 
 <div class="text-center">
-  <img src="/CleanShot 2025-05-31 at 17.21.36@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
+  <img src="/CleanShot 2025-06-01 at 19.14.24@2x.png" class="max-w-2xl mx-auto rounded-lg shadow-lg" alt="URL示例" />
 </div>
 
 ---
 
-# 肆 -- 使用 Nginx 反向代理
+# 肆 -- 安装Nginx并配置反向代理 (这里以1panel示例)
 
 ### 配置文件示例如下：
 
