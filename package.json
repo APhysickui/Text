@@ -1,66 +1,22 @@
 {
-  "name": "slidev-theme-apple",
-  "version": "1.0.0",
-  "description": "Apple-style theme for Slidev presentations",
-  "keywords": [
-    "slidev",
-    "slidev-theme",
-    "apple",
-    "presentation",
-    "theme"
-  ],
-  "homepage": "https://github.com/yourusername/slidev-theme-apple",
-  "bugs": {
-    "url": "https://github.com/yourusername/slidev-theme-apple/issues"
+  "name": "slidev-customized-ethan",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export",
+    "start": "slidev --port 3030",
+    "preview": "slidev build && slidev --port 3030"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourusername/slidev-theme-apple.git"
-  },
-  "author": "Your Name <your.email@example.com>",
-  "license": "MIT",
-  "main": "index.ts",
-  "files": [
-    "components",
-    "layouts",
-    "styles",
-    "index.ts",
-    "package.json",
-    "README.md"
-  ],
-  "engines": {
-    "node": ">=14.0.0",
-    "slidev": ">=0.42.0"
-  },
-  "peerDependencies": {
-    "@slidev/cli": ">=0.42.0",
-    "@slidev/types": ">=0.42.0"
+  "dependencies": {
+    "@slidev/cli": "^0.42.5",
+    "@slidev/theme-default": "^0.21.2",
+    "@slidev/theme-seriph": "^0.21.3",
+    "vue": "^3.3.4"
   },
   "devDependencies": {
-    "@iconify-json/carbon": "^1.1.18",
-    "@iconify-json/logos": "^1.1.33",
-    "@iconify-json/mdi": "^1.1.54",
-    "@slidev/cli": "^0.42.11",
-    "@slidev/types": "^0.42.5",
-    "playwright-chromium": "^1.52.0",
-    "prettier": "^3.5.3",
-    "prettier-plugin-slidev": "^1.0.5",
-    "typescript": "^5.0.0"
-  },
-  "scripts": {
-    "build": "slidev build slides.md",
-    "dev": "slidev slides.md",
-    "export": "slidev export slides.md",
-    "screenshot": "slidev export slides.md --format png"
-  },
-  "slidev": {
-    "colorSchema": "both",
-    "highlighter": "shiki",
-    "defaults": {
-      "fonts": {
-        "sans": "Inter, SF Pro Display",
-        "mono": "SF Mono"
-      }
-    }
+    "playwright-chromium": "^1.35.1",
+    "@types/node": "^18.16.19",
+    "typescript": "^5.1.6"
   }
 }
