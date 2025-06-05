@@ -50,7 +50,7 @@ mdc: true
 
 <br>
 
-## Contact me for free!
+## Contact me!
 
 <p style="font-size: 16px; line-height: 1.5;">
 Home : 
