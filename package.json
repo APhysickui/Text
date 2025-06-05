@@ -5,7 +5,7 @@
     "build": "slidev build",
     "dev": "slidev --open --remote=false",
     "export": "slidev export --remote=false",
-    "start": "slidev --port 3030 --remote=false",
+    "start": "slidev --remote=false --port 3030",
     "preview": "slidev build && slidev --port 3030"
   },
   "dependencies": {
