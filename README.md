@@ -53,4 +53,4 @@ npm run start
 
 ### 图示
 
-![图示](<CleanShot 2025-06-01 at 19.31.07@2x.png>)
+![图示](<figures/CleanShot 2025-06-01 at 19.31.07@2x.png>)
