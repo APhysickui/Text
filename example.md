@@ -85,3 +85,30 @@ Telegram :
 </p>
 
 <img src="figures/image.svg" class="rounded-full w-60 abs-tr mt-16 mr-12"/>
+
+---
+layout: center
+---
+
+# 第一节
+
+## 你的电脑是如何访问网页信息的？
+
+<div class="text-lg text-gray-600 dark:text-gray-300 mt-8">
+“不知道啊，我一出生就会用浏览器了🥸”
+</div>
+
+---
+layout: center
+---
+
+# 第二节
+
+## 如何提供网页信息供他人访问？
+
+  <div class="text-lg text-gray-600 dark:text-gray-300">
+  “有公众号为什么还要用网站” <br>
+  “因为有一个自己的网站很装啊🥸"
+  </div>
+
+---
