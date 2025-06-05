@@ -2,7 +2,7 @@
  * @Author: Ethan && ethan@hanlife02.com
  * @Date: 2025-05-31 00:04:53
  * @LastEditors: Ethan && ethan@hanlife02.com
- * @LastEditTime: 2025-06-01 20:47:59
+ * @LastEditTime: 2025-06-05 18:59:12
  * @FilePath: /slidev-customized-ethan/README.md
  * @Description:
  *
@@ -19,6 +19,8 @@
 
 - 本地有`Node.js`和`npm`环境，如果没有可以自行搜索安装教程
 
+这里我建议的版本`node`为v22.14.0, `npm`为10.9.2
+
 ### 运行slides流程
 
 1. clone此repo到本地
@@ -30,7 +32,7 @@ git clone git@github.com:hanlife02/slidev-customized-ethan.git
 2. 打开已clone的本地目录
 
 ```shell
-cd path/slidev-customized-ethan
+cd slidev-customized-ethan
 ```
 
 3. 安装依赖
