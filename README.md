@@ -2,7 +2,7 @@
  * @Author: Ethan && ethan@hanlife02.com
  * @Date: 2025-05-31 00:04:53
  * @LastEditors: Ethan && ethan@hanlife02.com
- * @LastEditTime: 2025-06-05 19:55:52
+ * @LastEditTime: 2025-06-05 19:57:00
  * @FilePath: /slidev-customized-ethan/README.md
  * @Description:
  *
@@ -17,9 +17,7 @@
 
 ### 环境准备
 
-- 本地有`Node.js`和`npm`环境
-
-这里我建议的版本`node`为v22.14.0, `npm`为10.9.2
+本地有`Node.js`和`npm`环境
 
 你可以参考这里的教程:[https://hanlife02.com/posts/tools/node-nvm](https://hanlife02.com/posts/tools/node-nvm)
 
