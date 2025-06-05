@@ -3,9 +3,9 @@
   "private": true,
   "scripts": {
     "build": "slidev build",
-    "dev": "slidev --open",
-    "export": "slidev export",
-    "start": "slidev --port 3030",
+    "dev": "slidev --open --remote=false",
+    "export": "slidev export --remote=false",
+    "start": "slidev --port 3030 --remote=false",
     "preview": "slidev build && slidev --port 3030"
   },
   "dependencies": {
