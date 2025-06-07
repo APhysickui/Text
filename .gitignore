@@ -67,10 +67,4 @@ slides.md
 
 .prettierrc
 
-# 忽略所有PNG文件
-*.png
-
-!CleanShot 2025-06-01 at 19.31.07@2x.png
-!image.png
-
 *.tar.gz
